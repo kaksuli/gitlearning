@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
+int factorial(int n){
+	if(n == 0)
+		return 1;
+	return factorial(n - 1) * n;
+}
 int main(){
 	int n;
 	cin >> n;
-	
-	int ans = 1;
-	for(int i = 1;i <= n;i++){
-		ans *= i;
-	}
-	
-	cout << ans;
+	cout << factorial(n);
 	
 	return 0;
 }
